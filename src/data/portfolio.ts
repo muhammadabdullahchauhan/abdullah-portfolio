@@ -6,9 +6,9 @@ export const PERSON = {
     "I build scalable, modern and interactive full-stack web applications using MongoDB, Express.js, React.js and Node.js.",
   secondary:
     "Turning ideas into reliable digital products through clean architecture, modern UI and robust APIs.",
-  email: "abdullahchauhan.dev@gmail.com",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  email: "raoabdullah111111@gmail.com",
+  github: "https://github.com/muhammadabdullahchauhan",
+  linkedin: "https://www.linkedin.com/in/muhammadabdullahchauhan/",
 };
 
 export const NAV_ITEMS = [
