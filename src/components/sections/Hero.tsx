@@ -4,6 +4,10 @@ import { MagneticButton } from "@/components/interaction/MagneticButton";
 import { Reveal } from "@/components/interaction/Reveal";
 import { PERSON } from "@/data/portfolio";
 import photoAsset from "@/assets/abdullah.png";
+import { Download } from "lucide-react";
+
+const CV_DOWNLOAD_URL = "/Muhammad-Abdullah-Chauhan-CV.pdf";
+const CV_DOWNLOAD_NAME = "Muhammad-Abdullah-Chauhan-CV.pdf";
 
 const BADGES = ["MongoDB", "Express", "React", "Node.js"];
 
@@ -101,6 +105,15 @@ export function Hero() {
               <MagneticButton variant="ghost" onClick={() => scrollTo("contact")}>
                 Let&apos;s Connect
               </MagneticButton>
+              <a
+                href={CV_DOWNLOAD_URL}
+                download={CV_DOWNLOAD_NAME}
+                className="group relative inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-primary-foreground transition-[transform,box-shadow,background] duration-300 will-change-transform glow-ring"
+                style={{ backgroundImage: "var(--gradient-brand)" }}
+              >
+                <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                Download CV
+              </a>
             </div>
           </Reveal>
 
