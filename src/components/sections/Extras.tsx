@@ -10,6 +10,11 @@ import { ApiFlowDiagram } from "@/components/sections/ApiArchitecture";
 import { AUTH_FLOW, CERTIFICATES, PERSON, PROCESS, SERVICES } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
+const EMAIL_ADDRESS = "raoabdullah111111@gmail.com";
+const EMAIL_SUBJECT = "Portfolio Inquiry";
+const GMAIL_COMPOSE_URL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL_ADDRESS)}`;
+const GMAIL_COMPOSE_URL_WITH_SUBJECT = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL_ADDRESS)}&su=${encodeURIComponent(EMAIL_SUBJECT)}`;
+
 export function DatabaseSection() {
   return (
     <Section className="overflow-hidden">
@@ -290,18 +295,31 @@ export function Contact() {
         />
         <Reveal preset="up" delay={0.2}>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <MagneticButton onClick={() => window.open(`mailto:${PERSON.email}`)}>
+            <a
+              href={GMAIL_COMPOSE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="button"
+              className="group relative inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-primary-foreground transition-[transform,box-shadow,background] duration-300 will-change-transform glow-ring"
+              style={{ backgroundImage: "var(--gradient-brand)" }}
+            >
               Let&apos;s Talk →
-            </MagneticButton>
+            </a>
             <MagneticButton variant="ghost" onClick={() => window.open(PERSON.github, "_blank")}>
               GitHub
             </MagneticButton>
             <MagneticButton variant="ghost" onClick={() => window.open(PERSON.linkedin, "_blank")}>
               LinkedIn
             </MagneticButton>
-            <MagneticButton variant="ghost" onClick={() => window.open(`mailto:${PERSON.email}`)}>
+            <a
+              href={GMAIL_COMPOSE_URL_WITH_SUBJECT}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="button"
+              className="group relative inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-foreground transition-[transform,box-shadow,background] duration-300 will-change-transform glass hover:border-cyan/50"
+            >
               Email
-            </MagneticButton>
+            </a>
           </div>
         </Reveal>
       </div>
